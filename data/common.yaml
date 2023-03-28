@@ -1,0 +1,22 @@
+
+
+sudo::config_file_replace: false
+sudo::prefix: 'puppet_'
+sudo::purge_ignore: '*[!_puppet]'
+
+sudo::configs:
+  admins:
+    content: '%admins ALL=(ALL) NOPASSWD: ALL'
+
+
+accounts::group_list:
+  admins: {}
+
+
+accounts::user_list:
+  cdunn:
+    comment: Craig Dunn
+    groups: [ 'admins' ]
+    sshkeys:
+      - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE1kN1KVKb2sLMFxODVXLeh0E0lw3QXkEshoszpW/See craig@localhost'
+

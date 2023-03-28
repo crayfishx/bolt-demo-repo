@@ -1,0 +1,14 @@
+config:
+  transport: ssh
+  ssh:
+    host-key-check: false
+    private-key: ~/.ssh/id_bolt
+    user: ubuntu
+    run-as: root
+
+
+groups:
+  - name: demo
+    targets:
+      - uri: demo-ubuntu.craigdunn.net
+

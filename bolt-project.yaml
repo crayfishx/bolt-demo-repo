@@ -1,0 +1,27 @@
+---
+name: bolt_demo
+
+modulepath:
+  - site
+  
+modules:
+  - name: puppetlabs-stdlib
+    git: https://github.com/puppetlabs/puppetlabs-stdlib.git
+    ref: v8.4.0
+    resolve: false
+
+  - name: puppetlabs-ntp
+    git: https://github.com/puppetlabs/puppetlabs-ntp.git
+    ref: v9.1.1
+    resolve: false
+
+  - name: puppetlabs-accounts
+    git: https://github.com/puppetlabs/puppetlabs-accounts.git
+    ref: v7.2.0
+    resolve: false
+
+  - name: saz-sudo
+    git: https://github.com/saz/puppet-sudo.git
+    ref: v7.0.2
+    resolve: false
+

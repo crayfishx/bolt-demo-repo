@@ -27,3 +27,8 @@ accounts::user_list:
       - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE1kN1KVKb2sLMFxODVXLeh0E0lw3QXkEshoszpW/See susan@localhost'
 
 
+  bob:
+    comment: Bob Newuser
+    groups: [ 'admins' ]
+    sshkeys:
+      - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE1kN1KVKb2sLMFxODVXLeh0E0lw3QXkEshoszpW/See Bob@localhost'

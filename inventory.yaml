@@ -2,7 +2,11 @@ config:
   transport: ssh
   ssh:
     host-key-check: false
-    private-key: ~/.ssh/id_bolt
+    private-key:
+      key-data:
+        _plugin: env_var
+        var: BOLT_SSH_KEY
+        
     user: ubuntu
     run-as: root
 

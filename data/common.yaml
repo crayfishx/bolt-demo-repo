@@ -20,3 +20,10 @@ accounts::user_list:
     sshkeys:
       - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE1kN1KVKb2sLMFxODVXLeh0E0lw3QXkEshoszpW/See craig@localhost'
 
+  susan:
+    comment: Susan Somebody
+    groups: [ 'admins' ]
+    sshkeys:
+      - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE1kN1KVKb2sLMFxODVXLeh0E0lw3QXkEshoszpW/See susan@localhost'
+
+

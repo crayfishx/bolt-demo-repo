@@ -1,0 +1,29 @@
+
+on:
+  push:
+    branches:
+      - master 
+
+env:
+  BOLT_SSH_KEY: ${{ secrets.BOLT_SSH_KEY }}
+  
+jobs:
+  bolt:
+    runs-on: ubuntu-latest
+    container:
+      image: puppet/puppet-bolt
+
+    steps:
+      - name: Install Git
+        run: |
+          apt update
+          apt -y install git
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Bolt install modules
+        run: bolt module install
+
+      - name: Bolt Apply
+        run: bolt plan run -v bolt_demo::puppet -t all
